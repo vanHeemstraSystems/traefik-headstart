@@ -6,8 +6,17 @@ services:
     container_name: traefik
     restart: unless-stopped
     security_opt:
-      - no-new-privileges:true    
-    network_mode: host
+      - no-new-privileges:true
+    networks:
+      - proxy
+    ports:
+      - 80:80
+      - 8080:8080
+      - 443:443    
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./data/traefik.yml:/etc/traefik.yml
+
+networks:
+  proxy:
+    external: true
