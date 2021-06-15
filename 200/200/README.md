@@ -7,7 +7,7 @@ version: "2.3"
 
 services:
   traefik:
-    image: traefik:v2.2.11
+    image: .
     network_mode: host
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
