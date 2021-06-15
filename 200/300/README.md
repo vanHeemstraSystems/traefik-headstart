@@ -6,6 +6,15 @@ If you browse to either ports 80 or 443, you’ll be met with a 404 page, this i
 
 Whilst we only defined 2 entrypoints, Traefik actually defines an additional one, on port 8080. This is used by default for the dashboard but can be used by your applications if you want, or disabled entirely. If you browse to port 8080 now, you’ll be met by the Traefik dashboard.
 
+***Note***: If you get a ***connection refused*** on ```port 8080```, you may not have set ```insecure: true``` in containers/traefik/data/traefik.yml:
+```
+api:
+  dashboard: true
+  insecure: true
+```
+Setting insecure means the dashboard is accessible to anyone and everyone on port 8080.
+
+
 
 Traefik dashboard
 
