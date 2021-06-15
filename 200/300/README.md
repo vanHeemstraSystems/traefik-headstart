@@ -5,7 +5,7 @@ Now we’ve got a Traefik configuration, and a docker configuration to run it, w
 If you browse to either ports 80 or 443, you’ll be met with a 404 page, this is normal. This happens because there’s no router matching the request - We’ll fix that later.
 
 ```
-curl http://localhost
+$ curl http://localhost
 404 page not found
 ```
 
@@ -15,7 +15,7 @@ $ curl http://localhost:80
 ```
 
 ```
-curl http://localhost:443
+$ curl http://localhost:443
 404 page not found
 ```
 
