@@ -1,1 +1,10 @@
+version: "3.7"
 
+services:
+  traefik:
+    build: .
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data/traefik:/etc/traefik
+    restart: unless-stopped
