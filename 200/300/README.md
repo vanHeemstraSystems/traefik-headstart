@@ -1,6 +1,21 @@
 # 300 - Test if Traefik is Accessible
 
-Now we’ve got a Traefik configuration, and a docker configuration to run it, we can start Traefik and check it’s all working. Once the container has been downloaded and started, Traefik is running, congratulations!
+Now we’ve got a Traefik configuration, and a docker configuration to run it, we can start Traefik and check it’s all working.
+
+Create a network first:
+
+```
+$ docker network create proxy
+```
+
+Now build and run traefik:
+
+```
+$ cd containers/traefik/
+$ docker-compose up -d
+```
+
+Once the container has been downloaded and started, Traefik is running, congratulations!
 
 If you browse to either ports 80 or 443, you’ll be met with a 404 page, this is normal. This happens because there’s no router matching the request - We’ll fix that later.
 
