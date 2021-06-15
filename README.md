@@ -11,7 +11,7 @@ Traefik has a bit of an image problem, mostly that it’s far too complex, fiddl
 
 See [README.md](./100/README.md)
 
-## 200 - ...
+## 200 - Starting Traefik
 
 See [README.md](./200/README.md)
 
