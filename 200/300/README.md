@@ -29,6 +29,8 @@ api:
 ```
 Setting insecure means the dashboard is accessible to anyone and everyone on port 8080.
 
+Check also where you are mounting the ```traefik.yml```, as explained in https://community.traefik.io/t/admin-8080-connection-refused/2242, should be ```/etc/traefik/traefik.yml```.
+
 
 
 Traefik dashboard
