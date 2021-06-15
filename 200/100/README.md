@@ -9,6 +9,7 @@ To access the dashboard, you’ll need to enable it in ```traefik.yml```. It’l
 api:
   dashboard: true
   insecure: true
+  debug: true
 ...  
 ```
 /containers/traefik/data/sample.traefik.yml
@@ -52,6 +53,7 @@ In sum:
 api:
   dashboard: true
   insecure: true
+  debug: true
 
 entryPoints:
   web:
