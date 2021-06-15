@@ -3,11 +3,11 @@
 Now that we have a Traefik configuration file, we need to have a Traefik. For this, I use ```docker-compose``` to create a container configuration:
 
 ```
-version: "2.3"
+version: "3.7"
 
 services:
   traefik:
-    image: .
+    build: .
     network_mode: host
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
